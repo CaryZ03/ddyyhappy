@@ -10,19 +10,55 @@
         <div class="nav-box"></div>
       </ul>
     </div>
-    <div class="float-start-button">
-      <span>即刻开始</span>
+    <div class="float-start-button" v-show="showText" @mouseenter="showText = true" @mouseleave="showText = false">
+        <transition name="fade">
+            <div class="hover-box">即刻开始&nbsp;&gt;&gt;</div>
+        </transition>
+    </div>
+    <div class="float-start-button" v-show="!showText" @mouseenter="showText = true" @mouseleave="showText = false">
+            <div class="default-box">即刻开始</div>
+    </div>
+    <!-- <div class="imageShow">
+        <image-show></image-show>
+    </div> -->
+    <div>
+        <transition-group name="slide">
+            <div v-if="showImage" class="image">
+                <img src="/media/1.jpg" alt="Image">
+            </div>
+        </transition-group>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'HomeView',
-    props: {
-      msg: String
+    // import ImageShow from '@/components/ImageShow.vue';
+    export default {
+        name: 'HomeView',
+        components: {
+            // ImageShow,
+        },
+        data() {
+            return {
+                showText: false,
+                showImage: true
+            };
+        },
+        methods: {
+            checkScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                // const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+
+                if (scrollTop >= 1500) {
+                    this.showImage = true;
+                }
+            },
+        },
+        mounted() {
+            window.addEventListener('scroll', this.checkScroll);
+        },
+
     }
-  }
 </script>
 
 <style>
@@ -33,7 +69,7 @@
     text-decoration: none;
 }
 body{
-    height: 3000px;
+    height: 4000px;
     background-color: #8da1f8;
 }
 
@@ -117,8 +153,8 @@ body{
   border-radius: 8px 0px 0px 8px;
   box-shadow: 0px 2px 15px 0px rgba(9,41,77,0.15);
   cursor: move;
-  span {
-    font-size: 800px;
+  div {
+    font-size: 1.25vw;
     color: #333333;
     text-align: center;
   }
@@ -127,6 +163,15 @@ body{
     font-size: 1.25vw;
     color: #333333;
     text-align: center;
-  }
+}
+.fade-enter-active{
+  transition: opacity 0.5s;
+}
+.image {
+  opacity: 1;
+  position: fixed;
+  top: 50%; /* 设置垂直位置为屏幕的中间 */
+  left: 50%; /* 设置水平位置为屏幕的中间 */
+}
 </style>
   

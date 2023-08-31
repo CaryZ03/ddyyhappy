@@ -31,22 +31,22 @@
       return {
         images: [
           {
-            src: "image1.jpg",
+            src: "/media/1.jpg",
             alt: "Image 1",
             description: "图片1介绍",
           },
           {
-            src: "image2.jpg",
+            src: "/media/2.jpg",
             alt: "Image 2",
             description: "图片2介绍",
           },
           {
-            src: "image3.jpg",
+            src: "/media/3.jpg",
             alt: "Image 3",
             description: "图片3介绍",
           },
           {
-            src: "image4.jpg",
+            src: "/media/4.jpg",
             alt: "Image 4",
             description: "图片4介绍",
           },
@@ -81,8 +81,8 @@
   }
   
   .image-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 400px;
     margin: 10px;
   }
   
@@ -93,18 +93,18 @@
   }
   
   .description-wrapper {
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
   }
   
   .description-item {
-    width: 150px;
-    height: 50px;
-    margin: 0 10px;
+    width: 100px;
+    height: 40px;
+    margin: 0;
     background-color: #f0f0f0;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     cursor: pointer;
   }
   
