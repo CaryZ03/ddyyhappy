@@ -3,13 +3,14 @@ import VueRouter from 'vue-router'
 
 import HomeView from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
+import Guidance from '../views/GuidanceView.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   { path: '/', component: HomeView },
   { path: '/about', component: About },
-//   { path: '/guidance', component: Guidance }
+  { path: '/guidance', component: Guidance }
 ];
 
 const router = new VueRouter({
