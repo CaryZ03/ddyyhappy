@@ -13,6 +13,55 @@
     <div class="float-start-button">
       <span>即刻开始</span>
     </div>
+    <div>
+      <div>
+        <span>Unknown 未知</span>
+        <span>便携式软件开发管理平台</span>
+        <span>组建团队, 一键管理软件设计</span>
+        <span>群聊私聊高效交流, 协作文档灵感碰撞</span>
+        <span>设计原型直观简洁, 文件系统层次分明</span>
+        <span>在开发中探索未知, 体验合作乐趣</span>
+        <button>立即使用</button>
+      </div>
+    </div>
+    <div>
+      <div>
+        <span>团队管理:</span>
+        <span>告别杂乱无章</span>
+        <span>团队间轻松切换, 提供不同团队成员身份,职责明确,权限分明,方便管理,满足第三方需求.</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <span>团队交流:</span>
+        <span>助力高效工作</span>
+        <span>支持消息通知,不遗漏每一条重要讯息,可任意私聊一对一推进任务,支持消息合并转发,管理未读消息,方便您的工作.</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <span>共享文档:</span>
+        <span>资源触手可及</span>
+        <span>提供多种模板适应开发需求,轻松编辑使用,支持多种类型文件导出,多人协同光标编辑,实时同步.</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <span>设计原型:</span>
+        <span>网页设计最强辅助</span>
+        <span>界面简介易懂,适应不同尺寸,提供大量基础模板,支持在线预览实时查看,多光标协同实时编辑</span>
+        <span>不仅是项目团队管理工具,更是强大的软件开发创作平台</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <span>Unknown</span>
+        <span>现在开始,探索未知</span>
+        <span>强大创作工具,高效管理支持</span>
+        <span>突破个人开发界限,探索团队无限潜能</span>
+        <button>立即使用</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -34,7 +83,7 @@
 }
 body{
     height: 3000px;
-    background-color: #8da1f8;
+    background: linear-gradient(to right, rgb(116, 135, 200), rgb(137, 198, 198));
 }
 
 .nav{
@@ -45,7 +94,7 @@ body{
     top: 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 0 0 10px 10px;
-    background-color: #fff;
+    background-color:  rgba(255, 255, 255, 0.5);
 }
 
 .logo{
@@ -55,7 +104,8 @@ body{
   align-items: center;
   right: 5%;
   margin-left: 3%;
-  color: rgb(70, 100, 180);
+  color: rgb(31, 24, 75);
+  font-size: 1.6vw;
 }
 
 .nav ul{
@@ -82,7 +132,7 @@ body{
     text-align: center;
 }
 .nav ul li a{
-    color: rgb(70, 100, 180);
+    color: rgb(3, 51, 69);
     font: 1.6vw '优设标题黑';
     display: block;
     width: 100%;
@@ -113,19 +163,14 @@ body{
   padding: 1.5vw;
   width: 10vw;
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px 0px 0px 8px;
   box-shadow: 0px 2px 15px 0px rgba(9,41,77,0.15);
   cursor: move;
-  span {
-    font-size: 800px;
-    color: #333333;
-    text-align: center;
-  }
 }
 .float-start-button span {
     font-size: 1.25vw;
-    color: #333333;
+    color: rgb(3, 51, 69);
     text-align: center;
   }
 </style>
