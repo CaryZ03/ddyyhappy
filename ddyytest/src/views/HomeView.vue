@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="father">
     <div class="nav">
     <div class="logo">Unknown</div> 
       <ul>
@@ -35,34 +35,34 @@
 
     <div class="module3">
       <div>
-        <span>团队交流:</span>
-        <span>助力高效工作</span>
-        <span>支持消息通知,不遗漏每一条重要讯息,可任意私聊一对一推进任务,支持消息合并转发,管理未读消息,方便您的工作.</span>
+        <span class="module3_1">团队交流:</span>
+        <span class="module3_2">助力高效工作</span>
+        <span class="module3_3">支持消息通知,不遗漏每一条重要讯息,可任意私聊一对一推进任务,支持消息合并转发,管理未读消息,方便您的工作.</span>
       </div>
     </div>
 
     <div class="module4">
       <div>
-        <span>共享文档:</span>
-        <span>资源触手可及</span>
-        <span>提供多种模板适应开发需求,轻松编辑使用,支持多种类型文件导出,多人协同光标编辑,实时同步.</span>
+        <span class="module4_1">共享文档:</span>
+        <span class="module4_2">资源触手可及</span>
+        <span class="module4_3">提供多种模板适应开发需求,轻松编辑使用,支持多种类型文件导出,多人协同光标编辑,实时同步.</span>
       </div>
     </div>
     <div class="module5">
       <div>
-        <span>设计原型:</span>
-        <span>网页设计最强辅助</span>
-        <span>界面简介易懂,适应不同尺寸,提供大量基础模板,支持在线预览实时查看,多光标协同实时编辑</span>
-        <span>不仅是项目团队管理工具,更是强大的软件开发创作平台</span>
+        <span class="module5_1">设计原型:</span>
+        <span class="module5_2">网页设计最强辅助</span>
+        <span class="module5_3">界面简介易懂,适应不同尺寸,提供大量基础模板,支持在线预览实时查看,多光标协同实时编辑</span>
+        <span class="module5_4">不仅是项目团队管理工具,更是强大的软件开发创作平台</span>
       </div>
     </div>
     <div class="module6">
       <div>
-        <span>Unknown</span>
-        <span>现在开始,探索未知</span>
-        <span>强大创作工具,高效管理支持</span>
-        <span>突破个人开发界限,探索团队无限潜能</span>
-        <button>立即使用</button>
+        <span class="module6_1">Unknown</span>
+        <span class="module6_2">现在开始,探索未知</span>
+        <span class="module6_3">强大创作工具,高效管理支持</span>
+        <span class="module6_4">突破个人开发界限,探索团队无限潜能</span>
+        <button class="module6_5">立即使用</button>
       </div>
     </div>
   </div>
@@ -85,10 +85,12 @@
     text-decoration: none;
 }
 body{
-    height: 3000px;
+    height: 300.5vw;
     background: linear-gradient(to right, rgb(116, 135, 200), rgb(137, 198, 198));
 }
-
+.father{
+  height: 300vw;
+}
 .nav{
     width: 100%;
     height: 3vw;
@@ -188,7 +190,7 @@ body{
   height: 42vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 15px 15px;
 }
 .module1_1{
   margin-top: 10vw;
@@ -251,7 +253,7 @@ body{
   height: 40vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius:  0px 0px 15px 15px;
+  border-radius:  15px 15px 15px 15px;
 }
 .module2_1{
   margin-top: 10vw;
@@ -284,9 +286,31 @@ body{
   height: 40vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius:  0px 0px 15px 15px;
+  border-radius:  15px 15px 15px 15px;
 }
-
+.module3_1 {
+  margin-top: 10vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module3_2{
+  margin-top: 13.5vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module3_3{
+  margin-top: 17vw;
+  position: absolute;
+  margin-left: 7.25vw;
+  font-size: 1.25vw;
+  margin-right: 65vw;
+  text-align: left;
+  line-height: 2.25vw;
+}
 .module4 {
   top: 129vw;
   margin-left: 1%;
@@ -295,9 +319,31 @@ body{
   height: 40vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius:  0px 0px 15px 15px;
+  border-radius:  15px 15px 15px 15px;
 }
-
+.module4_1 {
+  margin-top: 10vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module4_2{
+  margin-top: 13.5vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module4_3{
+  margin-top: 17vw;
+  position: absolute;
+  margin-left: 7.25vw;
+  font-size: 1.25vw;
+  margin-right: 65vw;
+  text-align: left;
+  line-height: 2.25vw;
+}
 .module5 {
   top: 170.5vw;
   margin-left: 1%;
@@ -306,9 +352,40 @@ body{
   height: 40vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius:  0px 0px 15px 15px;
+  border-radius:  15px 15px 15px 15px;
 }
-
+.module5_1 {
+  margin-top: 10vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module5_2{
+  margin-top: 13.5vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module5_3{
+  margin-top: 17vw;
+  position: absolute;
+  margin-left: 7.25vw;
+  font-size: 1.25vw;
+  margin-right: 65vw;
+  text-align: left;
+  line-height: 2.25vw;
+}
+.module5_4{
+  margin-top: 25vw;
+  position: absolute;
+  margin-left: 7.25vw;
+  font-size: 1.25vw;
+  margin-right: 65vw;
+  text-align: left;
+  line-height: 2.25vw;
+}
 .module6 {
   top: 212vw;
   margin-left: 1%;
@@ -317,7 +394,49 @@ body{
   height: 40vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius:  0px 0px 15px 15px;
+  border-radius:  15px 15px 15px 15px;
+}
+.module6_1 {
+  margin-top: 10vw;
+  position: absolute;
+  margin-left: 43vw;
+  font-size: 3vw;
+  font-weight: bold;
+}
+.module6_2{
+  margin-top: 13.5vw;
+  position: absolute;
+  margin-left: 39.5vw;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+.module6_3{
+  margin-top: 19vw;
+  position: absolute;
+  margin-left: 41.25vw;
+  font-size: 1.25vw;
+  text-align: left;
+}
+.module6_4{
+  margin-top: 21.5vw;
+  position: absolute;
+  margin-left: 38.5vw;
+  font-size: 1.25vw;
+  text-align: left;
+}
+.module6_5{
+  font-size: 1.25vw;
+  margin-left: 43vw;
+  position: absolute;
+  margin-top: 27vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+  background-color: black;
+  border-radius: 5px;
+  border-color: #000;
+  color: #eae4f9
 }
 </style>
   
