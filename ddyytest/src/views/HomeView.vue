@@ -194,14 +194,14 @@ body{
 }
 
 .float-start-button div {
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: #333333;
     text-align: center;
 }
 
 .text-slide {
   transition: transform 0.8s ease;
-  margin-left: 3.5vw;
+  margin-left: 1.5vw;
   text-align: center;
 }
 
