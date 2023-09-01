@@ -677,7 +677,7 @@ body{
 .module7_18{
   margin-top: 3vw;
   position: absolute;
-  margin-left: 76.5vw;
+  margin-left: 76.25vw;
   font-size: 1vw;
 }
 </style>
