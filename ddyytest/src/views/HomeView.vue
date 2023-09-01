@@ -10,24 +10,17 @@
         <div class="nav-box"></div>
       </ul>
     </div>
-    <div class="float-start-button" v-show="showText" @mouseenter="showText = true" @mouseleave="showText = false">
-        <transition name="fade">
-            <div class="hover-box">即刻开始&nbsp;&gt;&gt;</div>
-        </transition>
-    </div>
-    <div class="float-start-button" v-show="!showText" @mouseenter="showText = true" @mouseleave="showText = false">
-            <div class="default-box">即刻开始</div>
-    </div>
+    <transition name="slide-fade">
+        <div class="float-start-button">
+            <div class="text-slide">即刻开始</div>
+            <div class="fade-out"> >></div>
+        </div>
+    </transition>
+
+
     <!-- <div class="imageShow">
         <image-show></image-show>
     </div> -->
-    <div>
-        <transition-group name="slide">
-            <div v-if="showImage" class="image">
-                <img src="/media/1.jpg" alt="Image">
-            </div>
-        </transition-group>
-    </div>
   </div>
 </template>
 
@@ -44,20 +37,6 @@
                 showImage: true
             };
         },
-        methods: {
-            checkScroll() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-                // const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
-
-                if (scrollTop >= 1500) {
-                    this.showImage = true;
-                }
-            },
-        },
-        mounted() {
-            window.addEventListener('scroll', this.checkScroll);
-        },
-
     }
 </script>
 
@@ -147,31 +126,39 @@ body{
   top: 70%;
   z-index: 6666;
   padding: 1.5vw;
-  width: 10vw;
+  display: flex;
+  width: 15vw;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 8px 0px 0px 8px;
   box-shadow: 0px 2px 15px 0px rgba(9,41,77,0.15);
   cursor: move;
-  div {
-    font-size: 1.25vw;
-    color: #333333;
-    text-align: center;
-  }
 }
-.float-start-button span {
-    font-size: 1.25vw;
+.float-start-button div {
+    font-size: 2vw;
     color: #333333;
     text-align: center;
 }
-.fade-enter-active{
-  transition: opacity 0.5s;
+
+.text-slide {
+  transition: transform 0.8s ease;
+  margin-left: 3.5vw;
+  text-align: center;
 }
-.image {
-  opacity: 1;
-  position: fixed;
-  top: 50%; /* 设置垂直位置为屏幕的中间 */
-  left: 50%; /* 设置水平位置为屏幕的中间 */
+
+.float-start-button:hover .text-slide {
+  transform: translateX(-10px); /* 鼠标悬停时向左平移 10 像素 */
 }
+
+.fade-out {
+  opacity: 0; /* 一开始隐藏 */
+  margin-top: 0.3vw;
+  transition: opacity 0.8s ease; /* 过渡时间为0.3秒 */
+}
+
+.float-start-button:hover .fade-out {
+  opacity: 1; /* 鼠标悬停时显示 */
+}
+
 </style>
   
