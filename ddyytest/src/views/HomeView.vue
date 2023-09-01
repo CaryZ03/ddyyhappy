@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="father">
     <div class="nav">
     <div class="logo">Unknown</div> 
       <ul>
@@ -13,39 +13,43 @@
     <div class="float-start-button">
       <span>即刻开始</span>
     </div>
-    <div>
-      <div>
-        <span>Unknown 未知</span>
-        <span>便携式软件开发管理平台</span>
-        <span>组建团队, 一键管理软件设计</span>
-        <span>群聊私聊高效交流, 协作文档灵感碰撞</span>
-        <span>设计原型直观简洁, 文件系统层次分明</span>
-        <span>在开发中探索未知, 体验合作乐趣</span>
-        <button>立即使用</button>
+
+    <div class="module1">
+      <div >
+        <div class="module1_1">Unknown 未知</div>
+        <div class="module1_2">便携式软件开发管理平台</div>
+        <div class="module1_3">组建团队, 一键管理软件设计</div>
+        <div class="module1_4">群聊私聊高效交流, 协作文档灵感碰撞</div>
+        <div class="module1_5">设计原型直观简洁, 文件系统层次分明</div>
+        <div class="module1_6">在开发中探索未知, 体验合作乐趣</div>
+        <button class="model1_7">立即使用</button>
       </div>
     </div>
-    <div>
+
+    <div class="module2">
       <div>
-        <span>团队管理:</span>
-        <span>告别杂乱无章</span>
-        <span>团队间轻松切换, 提供不同团队成员身份,职责明确,权限分明,方便管理,满足第三方需求.</span>
+        <div>团队管理:</div>
+        <div>告别杂乱无章</div>
+        <div>团队间轻松切换, 提供不同团队成员身份,职责明确,权限分明,方便管理,满足第三方需求.</div>
       </div>
     </div>
-    <div>
+
+    <div class="module3">
       <div>
         <span>团队交流:</span>
         <span>助力高效工作</span>
         <span>支持消息通知,不遗漏每一条重要讯息,可任意私聊一对一推进任务,支持消息合并转发,管理未读消息,方便您的工作.</span>
       </div>
     </div>
-    <div>
+
+    <div class="module4">
       <div>
         <span>共享文档:</span>
         <span>资源触手可及</span>
         <span>提供多种模板适应开发需求,轻松编辑使用,支持多种类型文件导出,多人协同光标编辑,实时同步.</span>
       </div>
     </div>
-    <div>
+    <div class="module5">
       <div>
         <span>设计原型:</span>
         <span>网页设计最强辅助</span>
@@ -53,7 +57,7 @@
         <span>不仅是项目团队管理工具,更是强大的软件开发创作平台</span>
       </div>
     </div>
-    <div>
+    <div class="module6">
       <div>
         <span>Unknown</span>
         <span>现在开始,探索未知</span>
@@ -82,19 +86,23 @@
     text-decoration: none;
 }
 body{
-    height: 3000px;
+    height: 253.5vw;
     background: linear-gradient(to right, rgb(116, 135, 200), rgb(137, 198, 198));
 }
-
+.father{
+  top: 0;
+  height: 252vw;
+}
 .nav{
     width: 100%;
     height: 4.5vw;
-    position: fixed;
+    position: sticky;
     display: flex;
     top: 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 0 0 10px 10px;
-    background-color:  rgba(255, 255, 255, 0.5);
+    background-color:  rgba(255, 255, 255, 0.8);
+    z-index: 666;
 }
 
 .logo{
@@ -141,19 +149,19 @@ body{
 }
 .nav ul li:nth-child(1):hover~.nav-box{
     left: calc(40% / 4 *0 + 60%);
-    background-color: rgb(250, 190, 250);
+    background-color: rgb(168, 187, 252);
 }
 .nav ul li:nth-child(2):hover~.nav-box{
     left: calc(40% / 4 *1 + 60%);
-    background-color: red;
+    background-color: rgb(163, 217, 252);
 }
 .nav ul li:nth-child(3):hover~.nav-box{
     left: calc(40% / 4 *2 + 60%);
-    background-color: #d18df8;
+    background-color: #95ded5;
 }
 .nav ul li:nth-child(4):hover~.nav-box{
     left: calc(40% / 4 *3 + 60%);
-    background-color: #ffb1b1;
+    background-color: #c5e0a9;
 }
 .float-start-button {
   position: fixed;
@@ -172,6 +180,71 @@ body{
     font-size: 1.25vw;
     color: rgb(3, 51, 69);
     text-align: center;
-  }
+}
+.module1 {
+  top: 6vw;
+  margin-left: 1%;
+  position: absolute;
+  display: flex;
+  height: 40vw;
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0px 0px;
+}
+
+.module2 {
+  top: 46vw;
+  margin-left: 1%;
+  position: absolute;
+  display: flex;
+  height: 40vw;
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:  0px 0px 15px 15px;
+}
+
+.module3 {
+  top: 87.5vw;
+  margin-left: 1%;
+  position: absolute;
+  display: flex;
+  height: 40vw;
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:  0px 0px 15px 15px;
+}
+
+.module4 {
+  top: 129vw;
+  margin-left: 1%;
+  position: absolute;
+  display: flex;
+  height: 40vw;
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:  0px 0px 15px 15px;
+}
+
+.module5 {
+  top: 170.5vw;
+  margin-left: 1%;
+  position: absolute;
+  display: flex;
+  height: 40vw;
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:  0px 0px 15px 15px;
+}
+
+.module6 {
+  top: 212vw;
+  margin-left: 1%;
+  position: absolute;
+  display: flex;
+  height: 40vw;
+  width: 98%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:  0px 0px 15px 15px;
+}
 </style>
   
