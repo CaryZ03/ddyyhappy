@@ -1,10 +1,10 @@
 <template>
-  <div class="father">
+  <div>
     <div class="nav">
     <div class="logo">Unknown</div> 
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Guidance</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="Guidance">Guidance</a></li>
         <li><a href="#">WorkSpace</a></li>
         <li><a href="#">Login</a></li>
         <div class="nav-box"></div>
@@ -13,7 +13,6 @@
     <div class="float-start-button">
       <span>即刻开始</span>
     </div>
-
     <div class="module1">
       <div >
         <div class="module1_1">Unknown 未知</div>
@@ -86,17 +85,14 @@
     text-decoration: none;
 }
 body{
-    height: 253.5vw;
+    height: 3000px;
     background: linear-gradient(to right, rgb(116, 135, 200), rgb(137, 198, 198));
 }
-.father{
-  top: 0;
-  height: 252vw;
-}
+
 .nav{
     width: 100%;
-    height: 4.5vw;
-    position: sticky;
+    height: 3vw;
+    position: fixed;
     display: flex;
     top: 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -113,7 +109,8 @@ body{
   right: 5%;
   margin-left: 3%;
   color: rgb(31, 24, 75);
-  font-size: 1.6vw;
+  font-size: 1vw;
+  font-weight: bold;
 }
 
 .nav ul{
@@ -141,11 +138,12 @@ body{
 }
 .nav ul li a{
     color: rgb(3, 51, 69);
-    font: 1.6vw '优设标题黑';
+    font: 1vw '优设标题黑';
     display: block;
     width: 100%;
     height: 100%;
     line-height: 70px;
+    font-weight: bold;
 }
 .nav ul li:nth-child(1):hover~.nav-box{
     left: calc(40% / 4 *0 + 60%);
@@ -158,6 +156,7 @@ body{
 .nav ul li:nth-child(3):hover~.nav-box{
     left: calc(40% / 4 *2 + 60%);
     background-color: #95ded5;
+
 }
 .nav ul li:nth-child(4):hover~.nav-box{
     left: calc(40% / 4 *3 + 60%);
@@ -182,16 +181,32 @@ body{
     text-align: center;
 }
 .module1 {
-  top: 6vw;
+  top: 4.5vw;
   margin-left: 1%;
   position: absolute;
   display: flex;
-  height: 40vw;
+  height: 41.5vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0px 0px;
 }
-
+.module1_1{
+  margin-top: 10vw;
+  position: absolute;
+  font-size: 4vw;
+  margin-left: 5vw;
+  font-weight: bold;
+}
+.module1_2{
+  font-size: 4vw;
+  margin-left: 5vw;
+  margin-top: 15.5vw;
+  position: absolute;
+  font-weight: bold;
+}
+.module1_3{
+  font-size: 1.75vw;
+}
 .module2 {
   top: 46vw;
   margin-left: 1%;
