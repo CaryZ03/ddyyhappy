@@ -41,6 +41,7 @@
         <div class="module2_3">团队间轻松切换, 提供不同团队成员身份,职责明确,权限分明,方便管理,满足第三方需求.</div>
         <img class="module2_img1" src="/media/team1.png" alt="团队管理">
       </div>
+      <img class="module2_photo" src="/media/team2.png" alt="团队管理页面">
     </div>
 
     <div class="module3">
@@ -50,6 +51,7 @@
         <span class="module3_3">支持消息通知,不遗漏每一条重要讯息,可任意私聊一对一推进任务,支持消息合并转发,管理未读消息,方便您的工作.</span>
         <img class="module3_img1" src="/media/chat1.png" alt="团队交流">
       </div>
+      <img class="module3_photo" src="/media/chat2.png" alt="团队交流页面">
     </div>
 
     <div class="module4">
@@ -61,6 +63,7 @@
         <img class="module4_img2" src="/media/arrow.png" alt="共享文档">
         <img class="module4_img3" src="/media/pen.png" alt="共享文档">
       </div>
+      <img class="module4_photo" src="/media/document2.png" alt="共享文档页面">
     </div>
     <div class="module5">
       <div>
@@ -70,6 +73,7 @@
         <span class="module5_4">不仅是项目团队管理工具,更是强大的软件开发创作平台</span>
         <img class="module5_img1" src="/media/prototype1.png" alt="设计原型">
       </div>
+      <img class="module5_photo" src="/media/prototype2.png" alt="设计原型页面">
     </div>
     <div class="module6">
       <div>
@@ -357,6 +361,14 @@ body{
   margin-left: 6.75vw;
   margin-right: 65vw;
 }
+.module2_photo{
+  width: 55vw;
+  height: 36vw;
+  margin-top: 6vw;
+  position: absolute;
+  margin-left: 37vw;
+  margin-right: 65vw;
+}
 .module3 {
   top: 105vw;
   margin-left: 1%;
@@ -395,6 +407,14 @@ body{
   margin-top: 8vw;
   position: absolute;
   margin-left: 6.5vw;
+  margin-right: 65vw;
+}
+.module3_photo{
+  width: 55vw;
+  height: 36vw;
+  margin-top: 6vw;
+  position: absolute;
+  margin-left: 37vw;
   margin-right: 65vw;
 }
 .module4 {
@@ -451,6 +471,14 @@ body{
   margin-left: 21vw;
   margin-right: 65vw;
 }
+.module4_photo{
+  width: 55vw;
+  height: 36vw;
+  margin-top: 6vw;
+  position: absolute;
+  margin-left: 37vw;
+  margin-right: 65vw;
+}
 .module5 {
   top: 206vw;
   margin-left: 1%;
@@ -460,6 +488,14 @@ body{
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius:  15px 15px 15px 15px;
+}
+.module5_photo{
+  width: 55vw;
+  height: 36vw;
+  margin-top: 6vw;
+  position: absolute;
+  margin-left: 37vw;
+  margin-right: 65vw;
 }
 .module5_1{
   margin-top: 20vw;
