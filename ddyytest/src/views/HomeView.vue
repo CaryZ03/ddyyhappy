@@ -21,15 +21,15 @@
         <div class="module1_4">群聊私聊高效交流, 协作文档灵感碰撞</div>
         <div class="module1_5">设计原型直观简洁, 文件系统层次分明</div>
         <div class="module1_6">在开发中探索未知, 体验合作乐趣</div>
-        <button class="model1_7">立即使用</button>
+        <button class="module1_7">立即使用</button>
       </div>
     </div>
 
     <div class="module2">
       <div>
-        <div>团队管理:</div>
-        <div>告别杂乱无章</div>
-        <div>团队间轻松切换, 提供不同团队成员身份,职责明确,权限分明,方便管理,满足第三方需求.</div>
+        <div class="module2_1">团队管理:</div>
+        <div class="module2_2">告别杂乱无章</div>
+        <div class="module2_3">团队间轻松切换, 提供不同团队成员身份,职责明确,权限分明,方便管理,满足第三方需求.</div>
       </div>
     </div>
 
@@ -181,11 +181,11 @@ body{
     text-align: center;
 }
 .module1 {
-  top: 4.5vw;
+  top: 4vw;
   margin-left: 1%;
   position: absolute;
   display: flex;
-  height: 41.5vw;
+  height: 42vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0px 0px;
@@ -194,18 +194,54 @@ body{
   margin-top: 10vw;
   position: absolute;
   font-size: 4vw;
-  margin-left: 5vw;
+  margin-left: 7vw;
   font-weight: bold;
 }
 .module1_2{
   font-size: 4vw;
-  margin-left: 5vw;
+  margin-left: 7vw;
   margin-top: 15.5vw;
   position: absolute;
   font-weight: bold;
 }
 .module1_3{
-  font-size: 1.75vw;
+  font-size: 1.25vw;
+  margin-left: 7.25vw;
+  position: absolute;
+  margin-top: 23vw;
+}
+.module1_4{
+  font-size: 1.25vw;
+  margin-left: 7.25vw;
+  position: absolute;
+  margin-top: 25vw;
+}
+.module1_5{
+  font-size: 1.25vw;
+  margin-left: 7.25vw;
+  position: absolute;
+  margin-top: 27vw;
+}
+.module1_6{
+  font-size: 1.25vw;
+  margin-left: 7.25vw;
+  position: absolute;
+  margin-top: 29vw;
+}
+.module1_7{
+  font-size: 1.25vw;
+  margin-left: 7.25vw;
+  position: absolute;
+  margin-top: 33vw;
+  padding-left: 1.7vw;
+  padding-right: 1.7vw;
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+  background-color: black;
+  border-radius: 5px;
+  border-color: #000;
+  color: #eae4f9
+
 }
 .module2 {
   top: 46vw;
@@ -217,7 +253,29 @@ body{
   background-color: rgba(255, 255, 255, 0.5);
   border-radius:  0px 0px 15px 15px;
 }
-
+.module2_1{
+  margin-top: 10vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module2_2{
+  margin-top: 13.5vw;
+  position: absolute;
+  margin-left: 7vw;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.module2_3{
+  margin-top: 17vw;
+  position: absolute;
+  margin-left: 7.25vw;
+  font-size: 1.25vw;
+  margin-right: 65vw;
+  text-align: left;
+  line-height: 2.25vw;
+}
 .module3 {
   top: 87.5vw;
   margin-left: 1%;
