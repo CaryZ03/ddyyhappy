@@ -234,7 +234,7 @@ body{
   height: 42vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 0px 0px;
 }
 .module1_1{
   margin-top: 10vw;
@@ -297,7 +297,7 @@ body{
   height: 40vw;
   width: 98%;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius:  15px 15px 15px 15px;
+  border-radius:  0px 0px 15px 15px;
 }
 .module2_1{
   margin-top: 10vw;
