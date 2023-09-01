@@ -10,9 +10,18 @@
         <div class="nav-box"></div>
       </ul>
     </div>
-    <div class="float-start-button">
-      <span>即刻开始</span>
-    </div>
+    <transition name="slide-fade">
+        <div class="float-start-button">
+            <div class="text-slide">即刻开始</div>
+            <div class="fade-out"> >></div>
+        </div>
+    </transition>
+
+
+    <!-- <div class="imageShow">
+        <image-show></image-show>
+    </div> -->
+
     <div class="module1">
       <div >
         <div class="module1_1">Unknown 未知</div>
@@ -69,12 +78,19 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeView',
-    props: {
-      msg: String
+    // import ImageShow from '@/components/ImageShow.vue';
+    export default {
+        name: 'HomeView',
+        components: {
+            // ImageShow,
+        },
+        data() {
+            return {
+                showText: false,
+                showImage: true
+            };
+        },
     }
-  }
 </script>
 
 <style>
@@ -170,13 +186,41 @@ body{
   top: 70%;
   z-index: 6666;
   padding: 1.5vw;
-  width: 10vw;
+  display: flex;
+  width: 15vw;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px 0px 0px 8px;
   box-shadow: 0px 2px 15px 0px rgba(9,41,77,0.15);
   cursor: move;
 }
+
+.float-start-button div {
+    font-size: 1.5vw;
+    color: #333333;
+    text-align: center;
+}
+
+.text-slide {
+  transition: transform 0.8s ease;
+  margin-left: 1.5vw;
+  text-align: center;
+}
+
+.float-start-button:hover .text-slide {
+  transform: translateX(-10px); /* 鼠标悬停时向左平移 10 像素 */
+}
+
+.fade-out {
+  opacity: 0; /* 一开始隐藏 */
+  margin-top: 0.3vw;
+  transition: opacity 0.8s ease; /* 过渡时间为0.3秒 */
+}
+
+.float-start-button:hover .fade-out {
+  opacity: 1; /* 鼠标悬停时显示 */
+}
+
 .float-start-button span {
     font-size: 1.25vw;
     color: rgb(3, 51, 69);
