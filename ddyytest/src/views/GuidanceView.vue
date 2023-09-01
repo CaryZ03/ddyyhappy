@@ -10,9 +10,17 @@
         <div class="nav-box"></div>
       </ul>
     </div>
-    <div class="float-start-button">
-      <span>即刻开始</span>
-    </div>
+    <transition name="slide-fade">
+        <div class="float-start-button">
+            <div class="text-slide">即刻开始</div>
+            <div class="fade-out"> >></div>
+        </div>
+    </transition>
+    <transition name="slide-fade">
+      <div class="scroll-show" :style="scrollShowStyles" v-show="shouldAnimate">
+        <img src="/media/1.jpg" alt="hihi">
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -21,8 +29,35 @@
     name: 'HomeView',
     props: {
       msg: String
-    }
+    },
+    data() {
+      return {
+        scroll: 0,
+        animThreshold: 400, // 设置动画阈值
+      };
+    },
+    mounted() {
+      window.addEventListener("scroll", this.scrollChange)
+    },
+    methods: {
+      scrollChange() {
+        this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(this.scroll)
+      }
+    },
+    computed: {
+      shouldAnimate() {
+        return this.scroll > this.animThreshold;
+      },
+      scrollShowStyles() {
+        return {
+          transform: this.shouldAnimate ? 'translateX(100%)' : 'translateX(0%)',
+          opacity: this.shouldAnimate ? '1' : '0'};
+      }
+    },
   }
+  
+
 </script>
 
 <style>
@@ -128,5 +163,61 @@ body{
     color: rgb(3, 51, 69);
     text-align: center;
 }
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* 动画过渡效果 */
+}
+.float-start-button {
+  position: fixed;
+  right: 0;
+  top: 70%;
+  z-index: 6666;
+  padding: 1.5vw;
+  display: flex;
+  width: 10vw;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px 0px 0px 8px;
+  box-shadow: 0px 2px 15px 0px rgba(9,41,77,0.15);
+  cursor: move;
+}
+
+.float-start-button div {
+    font-size: 1.5vw;
+    color: #333333;
+    text-align: center;
+}
+
+.text-slide {
+  transition: transform 0.8s ease;
+  margin-left: 1.5vw;
+  text-align: center;
+}
+
+.float-start-button:hover .text-slide {
+  transform: translateX(-10px); /* 鼠标悬停时向左平移 10 像素 */
+}
+
+.fade-out {
+  opacity: 0; /* 一开始隐藏 */
+  margin-top: 0.3vw;
+  transition: opacity 0.8s ease; /* 过渡时间为0.3秒 */
+}
+
+.float-start-button:hover .fade-out {
+  opacity: 1; /* 鼠标悬停时显示 */
+}
+
+.scroll-show {
+  position: absolute;
+  top: 800px;
+  left: 0;
+  opacity: 0; 
+  transition: opacity 1.5s ease, transform 1.5s ease; 
+}
+
 </style>
   
